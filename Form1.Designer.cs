@@ -83,7 +83,7 @@
             this.listBoxLog.FormattingEnabled = true;
             this.listBoxLog.Location = new System.Drawing.Point(6, 19);
             this.listBoxLog.Name = "listBoxLog";
-            this.listBoxLog.Size = new System.Drawing.Size(467, 485);
+            this.listBoxLog.Size = new System.Drawing.Size(480, 498);
             this.listBoxLog.TabIndex = 0;
             // 
             // listBoxItems

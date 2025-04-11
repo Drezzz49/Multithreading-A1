@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Multithreading_A1
 {
-    internal class Member
+    public class Member
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public Member(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
+        public override string ToString()
+        {
+            return $"Member [ID: {Id}, Name: {Name}]";
+        }
     }
 }
