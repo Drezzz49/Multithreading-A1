@@ -17,6 +17,7 @@ namespace Multithreading_A1
             Name = name;
         }
 
+        //skriver över tostring funktionen för produkt så man ser dess id och namn
         public override string ToString()
         {
             return $"Product [ID: {Id}, Name: {Name}]";

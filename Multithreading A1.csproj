@@ -54,6 +54,8 @@
     </Compile>
     <Compile Include="LoanItem.cs" />
     <Compile Include="LoanItemManager.cs" />
+    <Compile Include="Tasks\AdminTask.cs" />
+    <Compile Include="Tasks\ReturnTask.cs" />
     <Compile Include="Tasks\LoanTask.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="MemberManager.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="ProductManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\UpdateGUITask.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

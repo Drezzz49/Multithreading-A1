@@ -14,12 +14,14 @@ namespace Multithreading_A1
 
 
 
-        public LoanItem(Member borrower, Product loanedProduct)
+        public LoanItem(Member borrower, Product loanedProduct, DateTime LoanedAt)
         {
-            Borrower = borrower;
-            LoanedProduct = loanedProduct;
+            this.Borrower = borrower;
+            this.LoanedProduct = loanedProduct;
+            this.LoanedAt = LoanedAt;
         }
 
+        //skriver över tostring funktionen för loanitem så man ser dess id och namn och lånad produkt
         public override string ToString()
         {
             return $"LoanItem [Member: {Borrower.Name}, Product: {LoanedProduct.Name}, Loaned At: {LoanedAt} ]";

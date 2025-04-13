@@ -17,6 +17,7 @@ namespace Multithreading_A1
             Name = name;
         }
 
+        //skriver över tostring funktionen för member så man ser dess id och namn
         public override string ToString()
         {
             return $"Member [ID: {Id}, Name: {Name}]";
