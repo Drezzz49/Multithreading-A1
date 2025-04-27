@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assignment 2\AccountNoDeadlock.cs" />
+    <Compile Include="Assignment 2\BankAccount.cs" />
+    <Compile Include="Assignment 2\Client.cs" />
+    <Compile Include="Assignment 2\DeadlockDemo.cs" />
+    <Compile Include="Assignment 2\TransactionSimulator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

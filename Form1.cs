@@ -35,8 +35,8 @@ namespace Multithreading_A1
             loanItemManager = new LoanItemManager();
 
             // Fill test data
-            productManager.GenerateTestProducts(20);//20 produkter
-            memberManager.GenerateTestMembers(7);//7members som kan låna saker
+            productManager.GenerateTestProducts(25);//25 produkter
+            memberManager.GenerateTestMembers(5);//5members som kan låna saker
 
             loanTask = new LoanTask(productManager, memberManager, loanItemManager);
             returnTask = new ReturnTask(productManager, loanItemManager);
@@ -56,6 +56,11 @@ namespace Multithreading_A1
             returnTask?.Stop();
             adminTask?.Stop();
             updateGUITask?.Stop();
+        }
+
+        private void btnAssignment2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
