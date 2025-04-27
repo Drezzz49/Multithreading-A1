@@ -1,4 +1,5 @@
-﻿using Multithreading_A1.Tasks;
+﻿using Multithreading_A1.Assignment_2;
+using Multithreading_A1.Tasks;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace Multithreading_A1
         private ProductManager productManager;
         private MemberManager memberManager;
         private LoanItemManager loanItemManager;
+
+        private TransactionSimulator transactionSimulator;
 
 
         public Form1()
@@ -56,11 +59,33 @@ namespace Multithreading_A1
             returnTask?.Stop();
             adminTask?.Stop();
             updateGUITask?.Stop();
+
         }
 
         private void btnAssignment2_Click(object sender, EventArgs e)
         {
+            listBoxLog.Items.Clear();
 
+            transactionSimulator = new TransactionSimulator(1000, 3, 2000);
+            transactionSimulator.Start();
+            transactionSimulator.PrintResults(listBoxLog);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            transactionSimulator.Stop();
+        }
+
+        private void btnDeadlock_Click(object sender, EventArgs e)
+        {
+            DeadlockSimulator deadlockSimulator = new DeadlockSimulator(listBoxLog);
+            deadlockSimulator.Start();
+        }
+
+        private void btnDeadlockFix_Click(object sender, EventArgs e)
+        {
+            DeadlockFixSimulator deadlockFixSimulator = new DeadlockFixSimulator(listBoxLog);
+            deadlockFixSimulator.Start();
         }
     }
 }

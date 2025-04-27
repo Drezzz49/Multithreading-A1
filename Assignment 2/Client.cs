@@ -11,9 +11,11 @@ namespace Multithreading_A1.Assignment_2
     {
         private static Random random = new Random();
         public int ClientId { get; }
-        public int TotalTransactions { get; private set; }
+        public double netAmount { get; private set; } //har koll på hur mycket pengar det borde finnas
         private BankAccount bankAccount;
         private volatile bool running = true;
+
+
 
         public Client(int clientId, BankAccount account)
         {
@@ -26,20 +28,21 @@ namespace Multithreading_A1.Assignment_2
             while (running)
             {
                 double amount = random.Next(1, 100);
-                if(random.NextDouble() < 0.5)
+                if(random.NextDouble() < 0.5)//50 50 chans att lägga till/ta ut pengar
                 {
                     bankAccount.Deposit(amount);
+                    netAmount += amount;
                 }
                 else
                 {
                     bankAccount.Withdraw(amount);
+                    netAmount -= amount;
                 }
-                TotalTransactions++;
                 Thread.Sleep(1);
             }
         }
 
-        public void stop()
+        public void Stop()
         {
             running = false;
         }

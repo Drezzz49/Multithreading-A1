@@ -14,24 +14,44 @@ namespace Multithreading_A1.Assignment_2
 
         public BankAccount(double initalBalance)
         {
-            this.balance = initalBalance;
+            lock (lock_)
+            {
+                this.balance = initalBalance;
+            }
         }
 
+        // Det här är den kritiska sektionen utan synkronisering
         public void Deposit(double amount)
         {
             //medvetet inget lås
-            balance += amount;
+            //balance += amount;
+
+            //treadsafe
+            lock (lock_)
+            {
+                balance += amount;
+            }
         }
 
+        // Det här är den kritiska sektionen utan synkronisering
         public void Withdraw(double amount)
         {
             //medvetet inget lås
-            balance -= amount;
+            //balance -= amount;
+
+            //treadsafe
+            lock (lock_)
+            {
+                balance -= amount;
+            }
         }
 
         public double getBalance()
         {
-            return balance;
+            lock (lock_)
+            {
+                return balance;
+            }
         }
     }
 }
