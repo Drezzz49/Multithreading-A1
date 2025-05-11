@@ -19,7 +19,7 @@ namespace Multithreading_A1.Assignment_3
 
         public override string ToString()
         {
-            return $"{Name} - {Price:C2}";
+            return $"{Name} - {Price}$";
         }
     }
 }
