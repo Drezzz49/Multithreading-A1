@@ -38,6 +38,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnDeadlock = new System.Windows.Forms.Button();
             this.btnDeadlockFix = new System.Windows.Forms.Button();
+            this.btnStartProducersConsumers = new System.Windows.Forms.Button();
+            this.btnStopProducersConsumers = new System.Windows.Forms.Button();
+            this.btnClearBuffer = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +104,7 @@
             // 
             // btnAssignment2
             // 
-            this.btnAssignment2.Location = new System.Drawing.Point(154, 543);
+            this.btnAssignment2.Location = new System.Drawing.Point(183, 543);
             this.btnAssignment2.Name = "btnAssignment2";
             this.btnAssignment2.Size = new System.Drawing.Size(107, 40);
             this.btnAssignment2.TabIndex = 4;
@@ -110,7 +114,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 543);
+            this.button1.Location = new System.Drawing.Point(296, 543);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 40);
             this.button1.TabIndex = 5;
@@ -120,7 +124,7 @@
             // 
             // btnDeadlock
             // 
-            this.btnDeadlock.Location = new System.Drawing.Point(154, 589);
+            this.btnDeadlock.Location = new System.Drawing.Point(183, 589);
             this.btnDeadlock.Name = "btnDeadlock";
             this.btnDeadlock.Size = new System.Drawing.Size(107, 40);
             this.btnDeadlock.TabIndex = 6;
@@ -130,7 +134,7 @@
             // 
             // btnDeadlockFix
             // 
-            this.btnDeadlockFix.Location = new System.Drawing.Point(267, 589);
+            this.btnDeadlockFix.Location = new System.Drawing.Point(296, 589);
             this.btnDeadlockFix.Name = "btnDeadlockFix";
             this.btnDeadlockFix.Size = new System.Drawing.Size(107, 40);
             this.btnDeadlockFix.TabIndex = 7;
@@ -138,11 +142,55 @@
             this.btnDeadlockFix.UseVisualStyleBackColor = true;
             this.btnDeadlockFix.Click += new System.EventHandler(this.btnDeadlockFix_Click);
             // 
+            // btnStartProducersConsumers
+            // 
+            this.btnStartProducersConsumers.Location = new System.Drawing.Point(449, 543);
+            this.btnStartProducersConsumers.Name = "btnStartProducersConsumers";
+            this.btnStartProducersConsumers.Size = new System.Drawing.Size(107, 40);
+            this.btnStartProducersConsumers.TabIndex = 8;
+            this.btnStartProducersConsumers.Text = "A3 Start";
+            this.btnStartProducersConsumers.UseVisualStyleBackColor = true;
+            this.btnStartProducersConsumers.Click += new System.EventHandler(this.btnStartProducersConsumers_Click);
+            // 
+            // btnStopProducersConsumers
+            // 
+            this.btnStopProducersConsumers.Location = new System.Drawing.Point(562, 543);
+            this.btnStopProducersConsumers.Name = "btnStopProducersConsumers";
+            this.btnStopProducersConsumers.Size = new System.Drawing.Size(107, 40);
+            this.btnStopProducersConsumers.TabIndex = 9;
+            this.btnStopProducersConsumers.Text = "A3 Stop";
+            this.btnStopProducersConsumers.UseVisualStyleBackColor = true;
+            this.btnStopProducersConsumers.Click += new System.EventHandler(this.btnStopProducersConsumers_Click);
+            // 
+            // btnClearBuffer
+            // 
+            this.btnClearBuffer.Location = new System.Drawing.Point(449, 589);
+            this.btnClearBuffer.Name = "btnClearBuffer";
+            this.btnClearBuffer.Size = new System.Drawing.Size(107, 40);
+            this.btnClearBuffer.TabIndex = 10;
+            this.btnClearBuffer.Text = "A3 Clear Buffer\r\nand production cap\r\n";
+            this.btnClearBuffer.UseVisualStyleBackColor = true;
+            this.btnClearBuffer.Click += new System.EventHandler(this.btnClearBuffer_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(562, 589);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(107, 40);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "A3 Clear Listbox";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 638);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnClearBuffer);
+            this.Controls.Add(this.btnStopProducersConsumers);
+            this.Controls.Add(this.btnStartProducersConsumers);
             this.Controls.Add(this.btnDeadlockFix);
             this.Controls.Add(this.btnDeadlock);
             this.Controls.Add(this.button1);
@@ -171,6 +219,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDeadlock;
         private System.Windows.Forms.Button btnDeadlockFix;
+        private System.Windows.Forms.Button btnStartProducersConsumers;
+        private System.Windows.Forms.Button btnStopProducersConsumers;
+        private System.Windows.Forms.Button btnClearBuffer;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

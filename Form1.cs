@@ -1,4 +1,5 @@
 ﻿using Multithreading_A1.Assignment_2;
+using Multithreading_A1.Assignment_3;
 using Multithreading_A1.Tasks;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,12 @@ namespace Multithreading_A1
         private LoanItemManager loanItemManager;
 
         private TransactionSimulator transactionSimulator;
+
+
+        //assignment3
+        private Storage storage;
+        private List<Producer> producers;
+        private List<Consumer> consumers;
 
 
         public Form1()
@@ -86,6 +93,83 @@ namespace Multithreading_A1
         {
             DeadlockFixSimulator deadlockFixSimulator = new DeadlockFixSimulator(listBoxLog);
             deadlockFixSimulator.Start();
+        }
+
+
+
+
+
+        //assignment3 knapparna
+        private void btnStartProducersConsumers_Click(object sender, EventArgs e)
+        {
+            listBoxLog.Items.Clear();
+            storage = new Storage(10, listBoxLog); //new Storage with a buffer size of 10
+
+            // Initialize producers
+            producers = new List<Producer>
+            {
+                new Producer("Factory 1", storage),
+                new Producer("Factory 2", storage),
+                new Producer("Factory 3", storage)
+            };
+
+            // Initialize consumers with their respective maximum capacities
+            consumers = new List<Consumer>
+            {
+                new Consumer("Store 1", storage, 12),
+                new Consumer("Store 2", storage, 15),
+                new Consumer("Store 3", storage, 10)
+            };
+
+
+
+            // Start all producer threads
+            foreach (var producer in producers)
+            {
+                producer.Start();
+            }
+            // Start all consumer threads
+            foreach (var consumer in consumers)
+            {
+                consumer.Start();
+            }
+
+            listBoxLog.Items.Add("Producers and Consumers started.");
+        }
+
+        private void btnStopProducersConsumers_Click(object sender, EventArgs e)
+        {
+            //? gör så jag kan kalla metoden "tryggt" även om den är null, det blir ingen NullReferenceException
+            storage?.Stop();
+
+            foreach (var producer in producers)
+            {
+                producer?.Stop();
+            }
+
+            foreach (var consumer in consumers)
+            {
+                consumer?.Stop();
+            }
+
+            // Clear the producer and consumer
+            producers.Clear();
+            consumers.Clear();
+        }
+
+        private void btnClearBuffer_Click(object sender, EventArgs e)
+        {
+            //? gör så jag kan kalla metoden "tryggt" även om den är null, det blir ingen NullReferenceException
+            storage?.ClearBuffer();
+
+            //reset production
+            storage?.resetProductionCap();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listBoxLog.Items.Clear();
+            listBoxItems.Items.Clear();
         }
     }
 }

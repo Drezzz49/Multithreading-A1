@@ -51,6 +51,10 @@
     <Compile Include="Assignment 2\Client.cs" />
     <Compile Include="Assignment 2\DeadlockSimulator.cs" />
     <Compile Include="Assignment 2\TransactionSimulator.cs" />
+    <Compile Include="Assignment 3\a3_Product.cs" />
+    <Compile Include="Assignment 3\Consumer.cs" />
+    <Compile Include="Assignment 3\Producer.cs" />
+    <Compile Include="Assignment 3\Storage.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
