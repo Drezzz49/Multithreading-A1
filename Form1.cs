@@ -171,5 +171,6 @@ namespace Multithreading_A1
             listBoxLog.Items.Clear();
             listBoxItems.Items.Clear();
         }
+
     }
 }
