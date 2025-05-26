@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreading A1", "Multithreading A1.csproj", "{A786870E-48B1-40A4-A55D-3D2B7EA92A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment4_CS_GUI", "..\Assignment4_CS_GUI\Assignment4_CS_GUI.csproj", "{3A3FF18C-0124-4A9D-8490-BD7233E8B5E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment4_CS_GUI", "Assignment4_CS_GUI\Assignment4_CS_GUI.csproj", "{3A3FF18C-0124-4A9D-8490-BD7233E8B5E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
